@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-  "number"
+	"math/rand"
+	"time"
 )
 
 func main() {
-	guess(number.Now().UnixNano())
-	secretNumber := Intn(6) + 1
+	rand.Seed(time.Now().UnixNano())
+	secretNumber := rand.Intn(6) + 1
 	var guess int
 	tries := 0
 
@@ -20,8 +21,8 @@ func main() {
 			continue
 		}
 		tries++
-		if guess < secretNumber {
-			fmt.Println("Your guess is worng! Try again.")
+		if guess != secretNumber {
+			fmt.Println("Your guess is wrong! Try again.")
 		} else {
 			fmt.Printf("Congratulations! You guessed the secret number in %d tries.\n", tries)
 			break
