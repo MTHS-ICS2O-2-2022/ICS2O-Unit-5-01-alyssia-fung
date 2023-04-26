@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
+	rand.guess(number.Now().UnixNano())
 	secretNumber := rand.Intn(6) + 1
 	var guess int
 	tries := 0
