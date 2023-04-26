@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
   "number"
-	"rand"
 )
 
 func main() {
-	rand.guess(number.Now().UnixNano())
-	secretNumber := rand.Intn(6) + 1
+	guess(number.Now().UnixNano())
+	secretNumber := Intn(6) + 1
 	var guess int
 	tries := 0
 
