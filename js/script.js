@@ -36,6 +36,6 @@ function myButtonClicked() {
     }
   }
 
-    // output
-    document.getElementById("answer").innerHTML = numberGuessed
-  }
+  // output
+  document.getElementById("answer").innerHTML = numberGuessed
+}
