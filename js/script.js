@@ -15,16 +15,16 @@ function myButtonClicked() {
   const numberGuessed = parseInt(
     document.getElementById("guessed-number").value
   )
-
+alert(randomNumber)
   // process
   if (valueFromSlider == randomNumber) {
-    document.getElementById("answer").innerHTML
+    document.getElementById("5").innerHTML
     "The answer was, " + randomNumber + "!" + "you go it! Good job."
   }
 
   //block of code to be execued if condition is true
   if (valueFromSlider !== randomNumber) {
-    document.getElementById("answer").innerHTML
+    document.getElementById("3").innerHTML
     "The answer was, " + randomNumber + "!" + " Nice guess, but try again"
   }
 
