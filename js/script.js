@@ -4,10 +4,6 @@
 // Created on: Mar 2023
 // This file contains the JS functions for index.html
 
-/**
- * This function calculates area and perimeter of rectangle.
- */
-
 "use strict"
 
 /**
