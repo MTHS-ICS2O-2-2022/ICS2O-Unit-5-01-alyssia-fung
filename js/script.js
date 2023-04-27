@@ -11,6 +11,7 @@
  */
 
 function myButtonClicked() {
+  alert("hello world")
   // input
   const numberGuessed = parseInt(
     document.getElementById("guessed-number").value
@@ -23,12 +24,14 @@ function myButtonClicked() {
   function undateSliderValue(valueFromSlider) {
     document.getElementById("slider-value").innerHTML = valueFromSlider
 
+    alert(valueFromSlider)
     // process
     if (valueFromSlider == randomNumber) {
       document.getElementById("answer").innerHTML
       "The answer was, " + randomNumber + "!" + "you go it! Good job."
     }
 
+    alert(randomNumber)
     //block of code to be execued if condition is true
     if (valueFromSlider !== randomNumber) {
       document.getElementById("answer").innerHTML
