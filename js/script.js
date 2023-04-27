@@ -15,18 +15,27 @@ function myButtonClicked() {
   const numberGuessed = parseInt(
     document.getElementById("guessed-number").value
   )
-  // process
-  if (valueFromSlider == randomNumber) {
-    document.getElementById("5").innerHTML
-    "The answer was, " + randomNumber + "!" + "you go it! Good job."
-  }
+  const randomNumber = Math.floor(Math.random() * 6) + 1
 
-  //block of code to be execued if condition is true
-  if (valueFromSlider !== randomNumber) {
-    document.getElementById("3").innerHTML
-    "The answer was, " + randomNumber + "!" + " Nice guess, but try again"
-  }
+  /**
+   * this function update the slider value
+   */
+  function undateSliderValue(valueFromSlider) {
+    document.getElementById("slider-value").innerHTML = valueFromSlider
 
-  // output
-  document.getElementById("answer").innerHTML = numberGuessed
+    // process
+    if (valueFromSlider == randomNumber) {
+      document.getElementById("5").innerHTML
+      "The answer was, " + randomNumber + "!" + "you go it! Good job."
+    }
+
+    //block of code to be execued if condition is true
+    if (valueFromSlider !== randomNumber) {
+      document.getElementById("3").innerHTML
+      "The answer was, " + randomNumber + "!" + " Nice guess, but try again"
+    }
+
+    // output
+    document.getElementById("answer").innerHTML = numberGuessed
+  }
 }
