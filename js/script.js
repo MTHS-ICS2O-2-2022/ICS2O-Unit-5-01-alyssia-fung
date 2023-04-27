@@ -15,7 +15,7 @@ function myButtonClicked() {
   const numberGuessed = parseInt(
     document.getElementById("guessed-number").value
   )
-alert(randomNumber)
+  alert(randomNumber)
   // process
   if (valueFromSlider == randomNumber) {
     document.getElementById("5").innerHTML
