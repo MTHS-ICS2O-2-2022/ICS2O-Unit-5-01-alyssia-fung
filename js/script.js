@@ -10,20 +10,18 @@
  * This function uses a selection component from https://github.com/CreativeIT/getmdl-select
  */
 
+var randomNumber = 0
+
+function randomnumbergenerator() {
+  randomNumber = Math.floor(Math.random() * 6) + 1
+}
+
 function myButtonClicked() {
   // input
   const numberGuessed = parseInt(
     document.getElementById("guessed-number").value
   )
-  const randomNumber = Math.floor(Math.random() * 6) + 1
-  alert(numberGuessed)
-  alert(randomNumber)
-  /**
-   * this function update the slider value
-   */
-  /* function undateSliderValue(valueFromSlider) {
-    document.getElementById("slider-value").innerHTML = valueFromSlider
-*/
+  alert()
 
   // process
   if (numberGuessed == randomNumber) {
