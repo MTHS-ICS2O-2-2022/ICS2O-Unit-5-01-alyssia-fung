@@ -11,34 +11,29 @@
  */
 
 function myButtonClicked() {
-  alert("hello world")
   // input
   const numberGuessed = parseInt(
     document.getElementById("guessed-number").value
   )
   const randomNumber = Math.floor(Math.random() * 6) + 1
-
+  alert(numberGuessed)
+  alert(randomNumber)
   /**
    * this function update the slider value
    */
-  function undateSliderValue(valueFromSlider) {
+  /* function undateSliderValue(valueFromSlider) {
     document.getElementById("slider-value").innerHTML = valueFromSlider
+*/
 
-    alert(valueFromSlider)
-    // process
-    if (valueFromSlider == randomNumber) {
-      document.getElementById("answer").innerHTML
+  // process
+  if (numberGuessed == randomNumber) {
+    document.getElementById("answer").innerHTML =
       "The answer was, " + randomNumber + "!" + "you go it! Good job."
-    }
-
-    alert(randomNumber)
-    //block of code to be execued if condition is true
-    if (valueFromSlider !== randomNumber) {
-      document.getElementById("answer").innerHTML
-      "The answer was, " + randomNumber + "!" + " Nice guess, but try again"
-    }
   }
 
-  // output
-  document.getElementById("answer").innerHTML = numberGuessed
+  //block of code to be execued if condition is true
+  if (numberGuessed !== randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "The answer was, " + randomNumber + "!" + " Nice guess, but try again"
+  }
 }
